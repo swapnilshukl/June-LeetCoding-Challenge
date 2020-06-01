@@ -14,7 +14,7 @@ TreeNode* invertTree(TreeNode* root) {
 Non-Recursive:
 
 TreeNode* invertTree(TreeNode* root) {
-    std::stack<TreeNode*> stk;
+    stack<TreeNode*> stk;
     stk.push(root);
     
     while (!stk.empty()) {
