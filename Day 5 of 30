@@ -1,0 +1,16 @@
+Question link- https://leetcode.com/explore/featured/card/june-leetcoding-challenge/539/week-1-june-1st-june-7th/3351/
+
+Solution:
+
+class Solution {
+public:
+    vector<int>v;
+    Solution(vector<int>& w) {
+        for(int i = 1; i < w.size(); i++) w[i] += w[i - 1];
+	     v = w;
+    }
+    
+    int pickIndex() {
+        return upper_bound(begin(v), end(v), rand() % v.back()) - begin(v);
+    }
+};
